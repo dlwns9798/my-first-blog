@@ -1,13 +1,23 @@
+
+
 <html>
     <head>
           <title>dlwns's first blog open</title>
     </head>
 
     <body>
+     
+     <div><h1><strong><a href= "/">dlwns's first webpage!</a></strong></h1></div>
 
+     <div><h2>Here are the contents</h2></div>
 
-     <p>Hi !</p>
-     <p>I miss my people</p>
+    {% for post in posts %}
+     <div> 
+          <p>published: {{post.published_date}}</p>
+          <h1>{{post.title}}</h1>
+          <p>{{post.text|linebreaksbr}}</p>
+     </div>
+    {% endfor %}
 
     </body>
 </html>
